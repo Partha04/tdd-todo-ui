@@ -1,16 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import "./App.css";
+import AddTodoForm from "./components/AddTodoForm";
+import {TodoProvider} from "./contexts/TodoContext";
+import Container from "./components/layouts/Container";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-̥
-    </div>
-  )
+    return (
+        <div className="App">
+            <TodoProvider>
+                <Container>
+                    <AddTodoForm/>
+                </Container>
+            </TodoProvider>
+        </div>
+    );
 }
 
-export default App
+export default App;
